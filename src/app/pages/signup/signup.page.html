@@ -1,0 +1,64 @@
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title">Bienvenido</ion-title>
+    <p class="subTitle">Regístrate para crear tu cuenta</p>
+  </div>
+
+  <form [formGroup]="regForm" novalidate>
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input formControlName="fullname" placeholder="Usuario" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <div style="padding-top: -26px;padding-bottom: 16px;"
+        *ngIf="this.regForm.controls?.['fullname'].touched && this.regForm.controls?.['fullname'].invalid">
+        <ion-text  *ngIf="errorControl.fullname.errors?.required" class="errorInput" color="danger">El nombre completo es requerido.</ion-text>
+      </div>
+
+      <ion-item>
+        <ion-input formControlName="email"  placeholder="Email" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <div style="padding-top: -26px;padding-bottom: 16px;"
+        *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid">
+        <ion-text  *ngIf="errorControl.email.errors?.required" class="errorInput" color="danger">
+          El email es requerido.
+        </ion-text>
+        <ion-text  *ngIf="errorControl.email.errors?.pattern">
+          El email debe ser válido
+        </ion-text>
+      </div>
+
+
+      <ion-item>
+        <ion-input formControlName="password" placeholder="Contraseña" class="input"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div style="padding-top: -26px;padding-bottom: 16px;"
+        *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid">
+        <ion-text  *ngIf="errorControl.password.errors?.required" class="errorInput" color="danger">La contraseña es requerida.</ion-text>
+        <ion-text *ngIf="errorControl.password.errors?.pattern">
+          La contraseña debe tener al menos
+          Un carácter especial
+          Una mayúscula
+          Un número
+          Contener 8 dígitos
+        </ion-text>
+      </div>
+    
+    </div>
+
+    <div class="signinLink">
+      <p> ¿Ya estas registrado? <a style="color: #FFC33F"  [routerLink]="['/login']">Inicia sesión</a></p>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+      <ion-fab-button (click)="signUp()">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </form>
+
+</ion-content>

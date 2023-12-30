@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "auth-example-871b7": {
+      "hosting": {
+        "app": [
+          "auth-example-871b7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "auth-example-871b7"
+  }
+}
