@@ -1,0 +1,92 @@
+* {
+  font-family: 'inter', sans-serif;
+  margin: auto;
+}
+
+.header {
+  padding: 5rem 2rem;
+  text-align: center;
+
+  .subTitle {
+    color: rgb(26, 26, 26);
+    font-size: 0.9rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+  }
+}
+
+#nosotros,
+#mision,
+#vision,
+#diferenciador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+
+  .ion-card-tittle {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 0 1rem;
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #nosotros,
+  #mision,
+  #vision,
+  #diferenciador {
+    flex-direction: row;
+
+    .ion-card-tittle {
+      font-size: 3rem;
+      margin-bottom: 8rem;
+    }
+
+    .image-container,
+    .text-container {
+      width: 50%;
+    }
+
+    .text-container {
+      padding: 0 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .header {
+    padding: 5rem 10rem;
+
+    .subTitle {
+      padding: 0 10rem;
+    }
+  }
+}

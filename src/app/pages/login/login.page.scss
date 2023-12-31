@@ -1,35 +1,42 @@
-.input{
-    font-size: 300;
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+  }
 
-}
-
-ion-item{
-    --background:#f1f1f1;
-    border-radius:10px;
+.input {
+    font-size: 1.2rem; 
+  }
+  
+  ion-item {
+    --background: #c4bfbf;
+    border-radius: 10px;
     margin-bottom: 16px;
-    ion-icon{
-        display: flex;
-        justify-content: flex-end;
+  
+    ion-icon {
+      display: flex;
+      justify-content: flex-end;
     }
- 
-}
-
-
-
-.header{
-    margin-top: 100px;
-    margin-bottom: 80px;
+  }
+  
+  .header {
+    margin-top: 5%; 
+   
     text-align: center;
-    .subTitle{
-        color: gray;
-        font-size: 0.9rem;
+  
+    .subTitle {
+      color: gray;
+      font-size: 1rem; 
     }
-    .title{
-        font-size: 2rem;
+  
+    .title {
+      font-size: 2rem;
     }
-}
-
-.signupLink{
+  }
+  
+  .signupLink {
     display: flex;
     margin: auto;
     flex-direction: row;
@@ -40,24 +47,41 @@ ion-item{
     bottom: 0;
     width: 80%;
     right: 0;
-    p{
-        font-size: 0.9rem;
-
+  
+    p {
+      font-size: 1rem; 
     }
-
-    a{
-        text-decoration: none;
+  
+    a {
+      text-decoration: none;
     }
-
-}
-
-.forgotPassword{
+  }
+  
+  .forgotPassword {
     display: flex;
     justify-content: flex-end;
-    a{
-        font-weight: 400;
-        font-size: 0.9rem;
-        text-decoration: none;
+  
+    a {
+      font-weight: 400;
+      font-size: 1rem; 
+      text-decoration: none;
+    }
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .header {
+      margin-top: 10%;
+      
     }
 
-}
+    #container {
+        height: auto;
+        margin-top: 20vh;
+      }
+  
+    .signupLink {
+      width: 100%;
+      
+    }
+  }
+  

@@ -1,13 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Micpada
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Salir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="container">
-    <ion-img src="assets/bn.png"/>
-  <ion-title style="margin-top: 3rem;" >Explora el mundo</ion-title>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="header">
+    <ion-title class="title">Identidad Digital</ion-title>
+    <p class="subTitle">Ideas Creativas e Innovadoras</p>
+    <div *ngIf="user">
+      <p>Bienvenido, {{ user.email }}</p>
+    </div>
+  </div>
+  <div id="container">
+
+    <h2>Nuestros servicios</h2>
+    
+    <ion-card color="tertiary">
+      <ion-card-content>
+        <ion-label>
+          <h3>Desarrollo Web</h3>
+          <ion-icon name="code"></ion-icon>
+          <p>
+            Construimos tu página web desde cero, personalizándola para alcanzar los objetivos de tu negocio.
+            Ya sea un blog personal o una tienda en línea para vender tus productos, creamos una página a tu medida.
+          </p>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="tertiary">
+      <ion-card-content>
+        <ion-label>
+          <h3>Diseño Gráfico</h3>
+          <ion-icon name="pencil"></ion-icon>
+          <p>
+            Desarrollamos desde tu logo hasta artes para tus publicaciones, banners para redes sociales y más. Enamora a tus clientes y destaca entre la competencia con un diseño atractivo y personalizado.
+          </p>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="tertiary" >
+      <ion-card-content>
+        <ion-label>
+          <h3>Marketing Digital</h3>
+          <ion-icon name="stats-chart"></ion-icon>
+          <p>
+            Posicionamos tu negocio en los primeros lugares de Google, atrayendo a más personas y clientes potenciales. Incrementa tus ventas y logra tus objetivos comerciales a través de una estrategia efectiva de marketing digital.
+          </p>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card id="section3">
+      <ion-card-content>
+        <h2>Por Qué Elegirnos</h2>
+    
+        <ion-item>
+          <ion-label>Resultados Garantizados</ion-label>
+          <p>Todos nuestros servicios garantizan valores reales de crecimiento para tu negocio.</p>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Atención y Cotización Personalizada</ion-label>
+          <p>Todos nuestros servicios son personalizados, tomando en cuenta el presupuesto y las necesidades específicas de cada cliente.</p>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Seguimiento y Monitoreo</ion-label>
+          <p>A cada cliente se le asigna un Digital Adviser, quien es un profesional capacitado para resolver cualquier duda o inquietud durante todo el proceso.</p>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Facilidad de Pagos</ion-label>
+          <p>Contamos con diferentes esquemas y métodos de pago, para que selecciones el que mejor se acomode a tus necesidades.</p>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    
+
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
-    <ion-fab-button [routerLink]="['/login']">
-      <ion-icon name="chevron-forward"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
+
+
+
+

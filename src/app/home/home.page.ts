@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AutheticationService } from '../authetication.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

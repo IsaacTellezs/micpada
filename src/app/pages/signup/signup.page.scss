@@ -1,10 +1,19 @@
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+
 .input{
     font-size: 300;
 
 }
 
 ion-item{
-    --background:#f1f1f1;
+    --background:#c4bfbf;
     border-radius:10px;
     margin-bottom: 16px;
     ion-icon{
@@ -50,3 +59,21 @@ ion-item{
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .header {
+      margin-top: 10%;
+      
+    }
+
+    #container {
+        height: auto;
+        margin-top: 20vh;
+      }
+  
+    .signupLink {
+      width: 100%;
+      
+    }
+  }
+  

@@ -47,7 +47,7 @@ export class SignupPage implements OnInit {
 
       if(user){
         loading.dismiss()
-        this.router.navigate(['/home'])
+        this.router.navigate(['/tabs/home'])
       }else{
         console.log('Escribe los valores correctos')
       }
